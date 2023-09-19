@@ -35,7 +35,6 @@ camera.position.z = -5
 camera.position.y += 5
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.autoRotate =true
 controls.target = new THREE.Vector3(
     -0.14624569960026113,
     2.992797293719448,
@@ -64,6 +63,7 @@ loader.load(
         // controls.target = (gltf.scene.position)
         console.log(gltf.scene.position)
         document.getElementById('loader-div')?.remove()
+        controls.autoRotate =true
 
         // light.add(gltf.scene.parent)
     },
